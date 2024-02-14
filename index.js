@@ -20,8 +20,8 @@ function verificarEdad(){
                 this.equipo = equipo
                 this.cancha = cancha
             }
-            const JUGADOR_UNO = new Jugadores(ingresoDeNombre,"Estarás en el equipo: Blanco","Te esperamos en la cancha #10")
-            console.log(JUGADOR_UNO);
+            const jugador= new Jugadores(ingresoDeNombre,"Estarás en el equipo: Blanco","Te esperamos en la cancha #10")
+            console.log(jugador);
                 
             }
         }else{
@@ -33,6 +33,14 @@ function verificarEdad(){
 
 const resultadoEdad = verificarEdad();
 console.log(resultadoEdad);
+
+
+let metodoPago = ["Tarjeta de credito o debito", "Transferencia", "Billetera digital", "Paypal"];
+
+let Pago = metodoPago.slice(1,2);
+
+console.log(Pago + ", es tu metodo de pago");
+
 
 
 
