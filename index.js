@@ -12,15 +12,28 @@ function verificarEdad(){
             for(let i = 1 ; i <=7; i ++){
             
             let ingresoDeNombre = prompt("Nombres de tus amiguitos:");
-            console.log("Hola, " + ingresoDeNombre + " .Estas Inscrito. Te esperamos!")
+            console.log("Hola, " + ingresoDeNombre + " .Estás Inscrito. Te esperamos!")
+
+            function Jugadores(nombre, equipo, cancha){
+            
+                this.nombre = nombre
+                this.equipo = equipo
+                this.cancha = cancha
+            }
+            const JUGADOR_UNO = new Jugadores(ingresoDeNombre,"Estarás en el equipo: Blanco","Te esperamos en la cancha #10")
+            console.log(JUGADOR_UNO);
                 
             }
         }else{
             console.log("No pueden jugar, por niñitos.")
         }
         
+        
      }
 
 const resultadoEdad = verificarEdad();
 console.log(resultadoEdad);
+
+
+
 
