@@ -1,6 +1,8 @@
 //Inscripción Futbol 7
 //La idea es de crear una plataforma de futbol 7 para que 14 personas se unan para jugar futbol y se encuentren en algun punto de la ciudad.
 //Dichas personas tienen que ser necesariamente mayores de edad y cada equipo esta conformado por 7 personas.
+//Se ha creado que cada persona cuenta con un equipo y cancha asignada
+//A su vez se debe escoger un metodo de pago.
 
 
 function verificarEdad(){
