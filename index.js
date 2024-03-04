@@ -24,7 +24,28 @@ function verificarEdad(){
             }
             const jugador= new Jugadores(ingresoDeNombre,"Estarás en el equipo: Blanco","Te esperamos en la cancha #10")
             console.log(jugador);
-                
+
+            const jugadoresArray =[
+                new Jugadores(ingresoDeNombre,"Estarás en el equipo: Blanco","Te esperamos en la cancha #10"),
+               
+            ]
+            const nuevosJugadores = document.getElementById("nuevosJugadores"); 
+            
+            function agregarCards(lista){
+                lista.forEach(Jugadores =>{
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+                    card.innerHTML = `
+                                        <h2>Hola! ${Jugadores.nombre}</h2>
+                                        <p>Equipo: ${Jugadores.equipo}</p>
+                                        <p>Cancha: ${Jugadores.cancha}</p>
+                                        `
+                nuevosJugadores.appendChild(card);
+                })
+            }
+            
+            agregarCards(jugadoresArray);
+
             }
         }else{
             console.log("No pueden jugar, por niñitos.")
