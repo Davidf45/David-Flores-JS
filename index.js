@@ -5,6 +5,10 @@
 //A su vez se debe escoger un metodo de pago.
 
 
+const boton = document.getElementById("boton");
+boton.addEventListener('click', function verificarEdad(){
+
+
 function verificarEdad(){
 
     let EDAD = prompt("¿Todos son mayores de edad? (responder con si o no)");
@@ -49,6 +53,7 @@ function verificarEdad(){
             }
         }else{
             console.log("No pueden jugar, por niñitos.")
+            alert('No pueden jugar, por niñitos.')
         }
         
         
@@ -56,7 +61,7 @@ function verificarEdad(){
 
 const resultadoEdad = verificarEdad();
 console.log(resultadoEdad);
-
+})
 
 let metodoPago = ["Tarjeta de credito o debito", "Transferencia", "Billetera digital", "Paypal"];
 
