@@ -19,7 +19,7 @@ function verificarEdad(){
             
             let ingresoDeNombre = prompt("Nombres de tus amiguitos:");
             console.log("Hola, " + ingresoDeNombre + " .Estás Inscrito. Te esperamos!")
-
+            
             function Jugadores(nombre, equipo, cancha){
             
                 this.nombre = nombre
@@ -45,6 +45,7 @@ function verificarEdad(){
                                         <p>Cancha: ${Jugadores.cancha}</p>
                                         `
                 nuevosJugadores.appendChild(card);
+                
                 })
             }
             
@@ -59,6 +60,7 @@ function verificarEdad(){
         
      }
 
+
 const resultadoEdad = verificarEdad();
 console.log(resultadoEdad);
 })
@@ -68,6 +70,7 @@ let metodoPago = ["Tarjeta de credito o debito", "Transferencia", "Billetera dig
 let Pago = metodoPago.slice(1,2);
 
 console.log(Pago + ", es tu metodo de pago");
+localStorage.setItem("Metodo de Pago",Pago);
 
 
 
