@@ -9,6 +9,7 @@ const boton = document.getElementById("boton");
 boton.addEventListener('click', function verificarEdad(){
 
 
+
 function verificarEdad(){
 
     let EDAD = prompt("¿Todos son mayores de edad? (responder con si o no)");
@@ -54,7 +55,12 @@ function verificarEdad(){
             }
         }else{
             console.log("No pueden jugar, por niñitos.")
-            alert('No pueden jugar, por niñitos.')
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "No pueden jugar por Niñitos!",
+                
+              });
         }
         
         
@@ -63,6 +69,74 @@ function verificarEdad(){
 
 const resultadoEdad = verificarEdad();
 console.log(resultadoEdad);
+})
+
+//Equipo 2
+
+
+const boton2 = document.getElementById("boton2");
+boton2.addEventListener('click', function verificarEdad2(){
+
+
+function verificarEdad2(){
+
+    let EDAD2 = prompt("¿Todos son mayores de edad? (responder con si o no)");
+     
+        if((EDAD2 == "si") || (EDAD2 == "Si") || (EDAD2 == "SI")){
+
+            for(let i = 1 ; i <=7; i ++){
+            
+            let ingresoDeNombre2 = prompt("Nombres de tus amiguitos:");
+            console.log("Hola, " + ingresoDeNombre2 + " .Estás Inscrito. Te esperamos!")
+            
+            function Jugadores2(nombre, equipo, cancha){
+            
+                this.nombre = nombre
+                this.equipo = equipo
+                this.cancha = cancha
+            }
+            const jugador= new Jugadores2(ingresoDeNombre2,"Estarás en el equipo: Negro","Te esperamos en la cancha #10")
+            console.log(jugador);
+
+            const jugadoresArray =[
+                new Jugadores2(ingresoDeNombre2,"Estarás en el equipo: Negro","Te esperamos en la cancha #10"),
+               
+            ]
+            const nuevosJugadores2 = document.getElementById("nuevosJugadores"); 
+            
+            function agregarCards(lista){
+                lista.forEach(Jugadores2 =>{
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+                    card.innerHTML = `
+                                        <h2>Hola! ${Jugadores2.nombre}</h2>
+                                        <p>Equipo: ${Jugadores2.equipo}</p>
+                                        <p>Cancha: ${Jugadores2.cancha}</p>
+                                        `
+                nuevosJugadores2.appendChild(card);
+                
+                })
+            }
+            
+            agregarCards(jugadoresArray);
+
+            }
+        }else{
+            console.log("No pueden jugar, por niñitos.")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "No pueden jugar por niñitos!",
+            
+              });
+        }
+        
+        
+     }
+
+
+const resultadoEdad2 = verificarEdad2();
+console.log(resultadoEdad2);
 })
 
 let metodoPago = ["Tarjeta de credito o debito", "Transferencia", "Billetera digital", "Paypal"];
